@@ -1,0 +1,85 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useHtmlLang": "warn",
+        "noHeaderScope": "warn",
+        "useValidAriaRole": {
+          "level": "warn",
+          "options": {
+            "ignoreNonDom": false,
+            "allowInvalidRoles": ["none", "text"]
+          }
+        },
+        "useSemanticElements": "off",
+        "noSvgWithoutTitle": "off",
+        "useMediaCaption": "off",
+        "noAutofocus": "off",
+        "noBlankTarget": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "noUnusedTemplateLiteral": "off",
+        "noUselessElse": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noConsoleLog": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "unsafe",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
+      }
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    },
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "asNeeded",
+      "semicolons": "asNeeded"
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "ignore": [],
+    "attributePosition": "auto",
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": [".next/*", "components/ui/**/*", "node_modules/**/*"]
+  }
+}
